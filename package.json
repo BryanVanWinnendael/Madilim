@@ -3,12 +3,16 @@
   "publisher": "BryanVanWinnendael",
   "displayName": "Madilim",
   "description": "Just another dark theme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "icon.png",
   "author": {
     "name": "Bryan Van Winnendael",
     "email": "bryan.vanwinnendael@skynet.be",
     "url": "https://github.com/BryanVanWinnendael/"
+  },
+  "repository": {
+    "url": "https://github.com/BryanVanWinnendael/Madilim.git",
+    "type": "git"
   },
   "engines": {
     "vscode": "^1.96.0"
