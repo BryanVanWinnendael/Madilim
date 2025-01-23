@@ -1,0 +1,23 @@
+{
+  "name": "madilim",
+  "publisher": "BryanVanWinnendael",
+  "displayName": "madilim",
+  "description": "Just another dark theme",
+  "version": "0.0.1",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Madilim",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Madilim-color-theme.json"
+      }
+    ]
+  }
+}
