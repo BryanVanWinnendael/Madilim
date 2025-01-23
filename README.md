@@ -1,5 +1,3 @@
-# Madilim
-
 # ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/banner.png)
 
 <h3 align="center">A custom dark-theme for the VSCode editor</h3>
