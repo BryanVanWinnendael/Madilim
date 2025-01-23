@@ -11,3 +11,13 @@
 ## About
 
 Madilim – Inspired by the Tagalog word for "dark," this VS Code theme brings a sleek and elegant darkness to your editor, created by Bryan Van Winnendael. For feature requests or bug reports please open an issue in the GitHub [repository](https://github.com/BryanVanWinnendael/Madilim).
+
+## Madilim full theme
+
+To get the full experience of Madilim install [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) and add the user settings:
+
+```json
+"vscode_custom_css.imports": [
+    "https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/refs/heads/main/theme.css"
+  ],
+```
