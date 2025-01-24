@@ -3,7 +3,7 @@
   "publisher": "BryanVanWinnendael",
   "displayName": "Madilim",
   "description": "Just another dark theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "icon.png",
   "author": {
     "name": "Bryan Van Winnendael",
@@ -20,7 +20,21 @@
   "categories": [
     "Themes"
   ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "madilim.enableCustomCSS",
+        "title": "Madilim: Enable rounded corners"
+      },
+      {
+        "command": "madilim.disableCustomCSS",
+        "title": "Madilim: Disable rounded corners"
+      }
+    ],
     "themes": [
       {
         "label": "Madilim",
@@ -28,5 +42,21 @@
         "path": "./themes/Madilim-color-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "vsce": "^2.15.0"
+  },
+  "extensionDependencies": [
+    "be5invis.vscode-custom-css"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
   }
 }
