@@ -21,6 +21,7 @@
 .monaco-list.list_id_1 .monaco-list-row.selected {
   border-radius: 4px;
   border: 1px solid #0078d42a;
+  background-color: #101010 !important;
 }
 .monaco-list.list_id_1:not(.drop-target):not(.dragging)
   .monaco-list-row:hover:not(.selected):not(.focused) {
