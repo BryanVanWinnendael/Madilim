@@ -3,7 +3,7 @@
   "publisher": "BryanVanWinnendael",
   "displayName": "Madilim",
   "description": "Just another dark theme",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "icon": "icon.png",
   "author": {
     "name": "Bryan Van Winnendael",
@@ -27,12 +27,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "madilim.enableCustomCSS",
-        "title": "Madilim: Enable rounded corners"
-      },
-      {
-        "command": "madilim.disableCustomCSS",
-        "title": "Madilim: Disable rounded corners"
+        "command": "madilim.toggleCustomCSS",
+        "title": "Madilim: Toggle rounded corners"
       }
     ],
     "themes": [

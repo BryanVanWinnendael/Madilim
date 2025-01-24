@@ -10,6 +10,88 @@
   --tab-border-bottom-color: none !important;
   --tab-border-top-color: none !important;
 }
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container {
+  gap: 5px;
+  margin: 0 5px 0 5px;
+}
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container {
+  align-items: center;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab {
+  height: 28px;
+  align-items: center;
+}
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .monaco-icon-label:before {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.sizing-fit
+  .monaco-icon-label,
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.sizing-fit
+  .monaco-icon-label
+  > .monaco-icon-label-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.monaco-workbench .part {
+  border: none !important;
+}
+
+.monaco-workbench .activitybar.left.bordered:before {
+  border: none;
+}
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  > .tabs-and-actions-container {
+  --tabs-border-bottom-color: none !important;
+}
+.monaco-editor,
+.monaco-editor-background {
+  background-color: #101010;
+}
+.monaco-editor .margin {
+  background-color: #101010;
+}
 .monaco-list.list_id_1 .monaco-list-row.selected {
   border-radius: 4px;
   background-color: #101010 !important;
@@ -21,4 +103,33 @@
 }
 .monaco-list-row.focused.selected {
   border-radius: 4px;
+}
+.monaco-workbench .part > .title > .title-label {
+  display: none;
+}
+.monaco-workbench .part.sidebar .title-actions .actions-container {
+  justify-content: flex-start;
+}
+.monaco-workbench .part.activitybar,
+.monaco-workbench .part,
+.monaco-pane-view .split-view-view:first-of-type > .pane > .pane-header,
+.monaco-list.list_id_1 .monaco-list-rows,
+.monaco-workbench .part.editor > .content .editor-group-container > .title,
+.monaco-list.list_id_2 .monaco-list-rows {
+  background-color: #101010 !important;
+}
+.monaco-list.list_id_2
+  .monaco-scrollable-element
+  .monaco-tree-sticky-container
+  .monaco-tree-sticky-row {
+  background-color: #101010 !important;
+}
+.monaco-workbench
+  .part.panel
+  .pane-body.integrated-terminal
+  .terminal-outer-container {
+  background-color: #101010;
+}
+.monaco-workbench .part.sidebar > .title {
+  background-color: #101010;
 }

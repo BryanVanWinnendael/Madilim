@@ -13,15 +13,15 @@ async function installCustomCssExtension() {
   }
 }
 
-async function activate(context) {
+function activate(context) {
   const ROUNDED_CSS_URL =
     "https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/rounded.css"
 
-  let enableCommand = vscode.commands.registerCommand(
-    "madilim.enableCustomCSS",
+  const toggleCommand = vscode.commands.registerCommand(
+    "madilim.toggleCustomCSS",
     async () => {
       // Check if vscode-custom-css is installed
-      let customCssExtension = vscode.extensions.getExtension(
+      const customCssExtension = vscode.extensions.getExtension(
         "be5invis.vscode-custom-css"
       )
 
@@ -33,20 +33,26 @@ async function activate(context) {
           )
           return
         }
+        await vscode.commands.executeCommand("extension.enableCustomCSS")
+        await vscode.commands.executeCommand("extension.reloadCustomCSS")
+        return
       }
 
       try {
-        // Update custom CSS settings with the URL
+        // Get current imports
         let imports = vscode.workspace
           .getConfiguration()
           .get("vscode_custom_css.imports")
 
-        if (imports && imports.includes(ROUNDED_CSS_URL)) {
-          vscode.window.showInformationMessage("Custom CSS is already enabled.")
-          return
-        }
+        const isEnabled = imports && imports.includes(ROUNDED_CSS_URL)
 
-        imports = imports ? [...imports, ROUNDED_CSS_URL] : [ROUNDED_CSS_URL]
+        if (isEnabled) {
+          // Disable by removing URL
+          imports = imports.filter((url) => url !== ROUNDED_CSS_URL)
+        } else {
+          // Enable by adding URL
+          imports = imports ? [...imports, ROUNDED_CSS_URL] : [ROUNDED_CSS_URL]
+        }
 
         await vscode.workspace
           .getConfiguration()
@@ -57,60 +63,22 @@ async function activate(context) {
           )
 
         const action = await vscode.window.showInformationMessage(
-          "Custom CSS has been enabled. VS Code needs to reload.",
+          `Custom CSS has been ${
+            isEnabled ? "disabled" : "enabled"
+          }. VS Code needs to reload.`,
           "Reload Now"
         )
 
         if (action === "Reload Now") {
-          await vscode.commands.executeCommand("workbench.action.reloadWindow")
+          await vscode.commands.executeCommand("extension.updateCustomCSS")
         }
-      } catch (err) {
-        vscode.window.showErrorMessage("Failed to enable custom CSS.")
+      } catch (_err) {
+        vscode.window.showErrorMessage("Failed to toggle custom CSS.")
       }
     }
   )
 
-  let disableCommand = vscode.commands.registerCommand(
-    "madilim.disableCustomCSS",
-    async () => {
-      try {
-        // Get the custom css settings and remove the URL
-        let imports = vscode.workspace
-          .getConfiguration()
-          .get("vscode_custom_css.imports")
-
-        if (!imports || !imports.includes(ROUNDED_CSS_URL)) {
-          vscode.window.showInformationMessage(
-            "Custom CSS is already disabled."
-          )
-          return
-        }
-
-        imports = imports.filter((url) => url !== ROUNDED_CSS_URL)
-
-        await vscode.workspace
-          .getConfiguration()
-          .update(
-            "vscode_custom_css.imports",
-            imports,
-            vscode.ConfigurationTarget.Global
-          )
-
-        const action = await vscode.window.showInformationMessage(
-          "Custom CSS has been disabled. VS Code needs to reload.",
-          "Reload Now"
-        )
-
-        if (action === "Reload Now") {
-          await vscode.commands.executeCommand("workbench.action.reloadWindow")
-        }
-      } catch (err) {
-        vscode.window.showErrorMessage("Failed to disable custom CSS.")
-      }
-    }
-  )
-
-  context.subscriptions.push(enableCommand, disableCommand)
+  context.subscriptions.push(toggleCommand)
 }
 
 function deactivate() {}
