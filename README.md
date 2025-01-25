@@ -1,4 +1,4 @@
-# ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/banner.png)
+# ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/banner.png)
 
 <h3 align="center">A custom dark-theme for the VSCode editor</h3>
 
@@ -7,6 +7,10 @@
   <img alt="Version" src="https://img.shields.io/github/v/release/BryanVanWinnendael/Madilim?color=orange&include_prereleases"/>
 	<img alt="Last Commit" src="https://img.shields.io/github/last-commit/BryanVanWinnendael/Madilim"/>
 </p>
+
+# ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img1.png)
+
+# ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img2.png)
 
 ## About
 
