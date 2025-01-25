@@ -19,12 +19,8 @@
 
 Madilim – Inspired by the Tagalog word for "dark," this VS Code theme brings a sleek and elegant darkness to your editor, created by Bryan Van Winnendael. For feature requests or bug reports please open an issue in the GitHub [repository](https://github.com/BryanVanWinnendael/Madilim).
 
-## Madilim full theme
+## Rounded Corners
 
-To get the full experience of Madilim install [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) and add the user settings:
+Rounded corners is disabled by default. Use the command to toggle it.
 
-```json
-"vscode_custom_css.imports": [
-    "https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/refs/heads/main/theme.css"
-  ],
-```
+![img3](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img3.png)
