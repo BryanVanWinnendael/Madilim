@@ -7,10 +7,13 @@
   <img alt="Version" src="https://img.shields.io/github/v/release/BryanVanWinnendael/Madilim?color=orange&include_prereleases"/>
 	<img alt="Last Commit" src="https://img.shields.io/github/last-commit/BryanVanWinnendael/Madilim"/>
 </p>
+<div style="display: flex; justify-content: space-between;">
 
-# ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img1.png)
+![img1](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img1.png)
 
-# ![Madilim](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img2.png)
+![img2](https://raw.githubusercontent.com/BryanVanWinnendael/Madilim/main/images/img2.png)
+
+</div>
 
 ## About
 
